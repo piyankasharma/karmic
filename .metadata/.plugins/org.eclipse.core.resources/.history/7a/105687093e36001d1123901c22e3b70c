@@ -1,0 +1,40 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Calendar2 {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:/MySpace/JavaProjects/Practice/Drivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.momondo.com/");
+		//driver.findElement(By.xpath("//span[text()='Departure']")).click();
+		for(int i=0;i<3;i++)
+		{
+			driver.findElement(By.xpath("//label[@data-text='Month']")).click();
+			
+		}
+		List<WebElement> cal2=driver.findElements(By.xpath("//label[@data-text='Dates']"));
+				for(WebElement op:cal2)
+				{
+					if(op.getText().equalsIgnoreCase("15"))
+					{
+						try{
+							op.click();
+							break;
+						}
+						catch(Exception e)
+						{
+						}
+						}
+					}
+				}
+	}
+
+}

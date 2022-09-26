@@ -1,0 +1,20 @@
+
+public abstract class Mobile {
+
+		
+	private void instagram()
+	{
+		System.out.println("A social media");
+	}
+	
+	public void facebook()
+	{
+		System.out.println("A big platform of social media");
+	}
+	public abstract void whatsapp();
+	
+	
+	
+	
+
+}

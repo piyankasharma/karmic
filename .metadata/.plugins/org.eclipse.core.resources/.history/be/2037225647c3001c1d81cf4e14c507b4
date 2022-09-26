@@ -1,0 +1,10 @@
+package com.training.examples;
+
+public class Callme {
+	
+	public static  String calling(String fromOthercalss){
+		
+		return (" I am listening");
+	}
+
+}

@@ -1,0 +1,8 @@
+
+public class Tab extends Mobile {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

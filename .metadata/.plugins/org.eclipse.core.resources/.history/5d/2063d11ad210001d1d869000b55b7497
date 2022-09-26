@@ -1,0 +1,36 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+@Test
+public class Practice1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:/MySpace/JavaProjects/Practice/Drivers/Chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+		System.out.println(driver.findElement(By.xpath("//input[@value='radio2']")).isSelected());
+		Assert.assertFalse(driver.findElement(By.xpath("//input[@value='radio2']")).isSelected());
+		
+		driver.findElement(By.xpath("//input[@value='radio2']")).click();
+		System.out.println(driver.findElement(By.xpath("//input[@value='radio2']")).isSelected());
+		System.out.println(driver.findElements(By.xpath("//input[@name='radioButton']")).size());
+		System.out.println(driver.findElement(By.xpath("//input[@id='checkBoxOption1']")).isSelected());
+		driver.findElement(By.xpath("//input[@id='checkBoxOption1']")).click();
+		System.out.println(driver.findElement(By.xpath("//input[@id='checkBoxOption1']")).isSelected());
+		System.out.println(driver.findElements(By.xpath("(//fieldset//input[@type='checkbox'])")).size());
+		
+		Select obj=new Select(driver.findElement(By.xpath("//select[@id='dropdown-class-example']")));
+		obj.selectByVisibleText("Option3");
+		driver.findElement(By.id("autocomplete")).sendKeys("ind");
+		Thread.sleep(4000);
+		driver.findElement(By.xpath("(//li//div[text()='India'])")).click();
+		//driver.close();
+		
+
+	}
+
+}

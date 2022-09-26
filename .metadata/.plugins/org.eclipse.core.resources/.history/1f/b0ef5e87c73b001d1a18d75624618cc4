@@ -1,0 +1,16 @@
+
+public class Tab extends Mobile{
+
+	public static void main(String[] args) {
+		
+      Tab obj=new Tab();
+      obj.whatsapp();
+	}
+	public void whatsapp()
+	{
+		System.out.println("easy to connect");
+		
+	}
+	
+      
+}

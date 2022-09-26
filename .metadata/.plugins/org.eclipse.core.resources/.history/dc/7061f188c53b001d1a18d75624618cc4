@@ -1,0 +1,16 @@
+
+public class Mobile {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	
+	public void Instagram()
+	{
+		System.out.println("A social media");
+	}
+	
+
+}
